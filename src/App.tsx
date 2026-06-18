@@ -11,6 +11,7 @@ import BusinessOrder from './pages/BusinessOrder'
 import IndividualOrder from './pages/IndividualOrder'
 import Pricing from './pages/Pricing'
 import FAQ from './pages/FAQ'
+import Portfolio from './pages/Portfolio'
 import NotFound from './pages/NotFound'
 import MistBackground from './components/MistBackground'
 import ScrollToTop from './components/ScrollToTop'
@@ -29,6 +30,7 @@ function AnimatedRoutes() {
         <Route path="/order/business" element={<BusinessOrder />} />
         <Route path="/order/individual" element={<IndividualOrder />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { to: '/', label: 'Home' },
   { to: '/order', label: 'Start a Project' },
   { to: '/pricing', label: 'Pricing' },
+  { to: '/portfolio', label: 'Example Work' },
   { to: '/about', label: 'About Us' },
   { to: '/faq', label: 'FAQ' },
   { to: '/contact', label: 'Contact Us' },

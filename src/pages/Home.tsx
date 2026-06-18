@@ -5,6 +5,7 @@ import './pages.css'
 
 const MENU_ITEMS = [
   { label: 'Start a Project', path: '/order' },
+  { label: 'Example Work', path: '/portfolio' },
   { label: 'Pricing', path: '/pricing' },
   { label: 'About Us', path: '/about' },
   { label: 'Contact Us', path: '/contact' },
