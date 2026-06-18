@@ -11,6 +11,41 @@ const MENU_ITEMS = [
   { label: 'Contact Us', path: '/contact' },
 ]
 
+const IDEAS = [
+  {
+    title: 'We can make a uniquely catered browser for you!',
+    desc: 'A custom web experience built around how you work. Your branding, your flows, your tools in one place.',
+  },
+  {
+    title: 'Booking & enquiry tools',
+    desc: 'Let customers book classes, request quotes, or submit structured enquiries without the back-and-forth.',
+  },
+  {
+    title: 'Client & member portals',
+    desc: 'Give people a login to view their account, track progress, upload documents, or manage their membership.',
+  },
+  {
+    title: 'Internal dashboards',
+    desc: 'Replace spreadsheets with a simple admin panel to track jobs, inventory, staff schedules, or daily operations.',
+  },
+  {
+    title: 'Mobile-ready web apps',
+    desc: 'Apps that work in the browser on any phone. No App Store required unless you want one later.',
+  },
+  {
+    title: 'Smart intake forms',
+    desc: 'Route enquiries by type so you get the right details upfront. Perfect for clinics, gyms, and service businesses.',
+  },
+  {
+    title: 'Landing pages that convert',
+    desc: 'A focused page for one offer, one audience, one call to action. Built to turn visitors into leads.',
+  },
+  {
+    title: 'Something entirely your own',
+    desc: 'Got a niche idea? We scope it with you and build exactly what your business needs, not an off-the-shelf template.',
+  },
+]
+
 const STEPS = [
   {
     num: '01',
@@ -131,6 +166,56 @@ export default function Home() {
         >
           <MistButton variant="large" onClick={() => navigate('/order')}>
             Start a Project
+          </MistButton>
+        </motion.div>
+      </section>
+
+      {/* ── Project Ideas ── */}
+      <section
+        className="page page--wide"
+        style={{ paddingTop: '5rem', paddingBottom: '5rem' }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="page__title" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.2rem)' }}>
+            Don&apos;t know what to make? We&apos;ll give you some ideas.
+          </h2>
+          <p className="page__subtitle">
+            Not sure where to start? Here are a few things we build for businesses and individuals every day.
+          </p>
+        </motion.div>
+
+        <div className="page__divider" />
+
+        <div className="ideas-grid">
+          {IDEAS.map((idea, i) => (
+            <motion.div
+              className="idea-card"
+              key={idea.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-30px' }}
+              transition={{ duration: 0.45, delay: i * 0.06 }}
+            >
+              <h3 className="idea-card__title">{idea.title}</h3>
+              <p className="idea-card__desc">{idea.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          style={{ marginTop: '3rem' }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+        >
+          <MistButton variant="large" onClick={() => navigate('/order')}>
+            Tell Us Your Idea
           </MistButton>
         </motion.div>
       </section>
