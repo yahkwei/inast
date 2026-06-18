@@ -28,8 +28,9 @@ Replace `YOUR_USERNAME` and repo name with yours.
 
 ### 3. Enable GitHub Pages
 1. Open your repo on GitHub → **Settings** → **Pages**
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**
-3. Wait ~1–2 minutes for the workflow to finish
+2. Under **Build and deployment**, set **Source** to **Deploy from a branch**
+3. Set **Branch** to `gh-pages` and folder to `/ (root)`
+4. Save — wait ~1–2 minutes for the workflow to finish (check the **Actions** tab)
 
 Your site will be live at:
 `https://YOUR_USERNAME.github.io/inast/`
