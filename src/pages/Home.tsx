@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import MistButton from '../components/MistButton'
+import { PROJECT_IDEAS_SECTION_ID } from '../lib/anchors'
 import './pages.css'
 
 const MENU_ITEMS = [
@@ -172,8 +173,9 @@ export default function Home() {
 
       {/* ── Project Ideas ── */}
       <section
+        id={PROJECT_IDEAS_SECTION_ID}
         className="page page--wide"
-        style={{ paddingTop: '5rem', paddingBottom: '5rem' }}
+        style={{ paddingTop: '5rem', paddingBottom: '5rem', scrollMarginTop: '5.5rem' }}
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -2,6 +2,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, type ReactNode } from 'react'
 import { BRAND_NAME } from '../lib/brand'
+import IdeasShortcut from './IdeasShortcut'
 import './Layout.css'
 
 interface LayoutProps {
@@ -30,6 +31,8 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div className="layout">
+      <IdeasShortcut />
+
       <header className="layout__header">
         <NavLink to="/" className="layout__brand" onClick={() => setMenuOpen(false)}>
           Inast
