@@ -1,0 +1,71 @@
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-deep);
+  overflow: hidden;
+}
+
+.intro__mist-burst {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.25) 0%,
+    rgba(180, 170, 200, 0.08) 40%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.intro__logo {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--grey-100);
+  text-align: center;
+  line-height: 1.15;
+  text-shadow:
+    0 0 40px rgba(124, 58, 237, 0.5),
+    0 0 80px rgba(124, 58, 237, 0.2),
+    0 0 120px rgba(180, 170, 220, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.intro__logo-sub {
+  display: block;
+  font-size: 0.55em;
+  letter-spacing: 0.2em;
+  color: var(--purple-soft);
+  font-weight: 400;
+  margin-top: 0.15em;
+  text-align: center;
+}
+
+.intro__dissolve-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.intro__dissolve-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(200, 190, 230, 0.6);
+  filter: blur(2px);
+}
+
+.intro__fog {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 30%, var(--bg-deep) 80%);
+  pointer-events: none;
+}
