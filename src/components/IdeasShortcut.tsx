@@ -22,22 +22,26 @@ export default function IdeasShortcut() {
   }
 
   return (
-    <div className="ideas-shortcut" aria-hidden={false}>
+    <aside className="ideas-shortcut">
       <button
         type="button"
-        className="ideas-shortcut__btn"
+        className="ideas-shortcut__trigger"
         onClick={goToIdeas}
         aria-label="Don't know what to make? View project ideas"
       >
-        <span className="ideas-shortcut__pulse" aria-hidden />
-        <span className="ideas-shortcut__icon" aria-hidden>
-          ?
+        <span className="ideas-shortcut__spine" aria-hidden>
+          <span className="ideas-shortcut__spine-text">Ideas</span>
         </span>
-        <span className="ideas-shortcut__text">
-          <span className="ideas-shortcut__label">Don&apos;t know what to make?</span>
-          <span className="ideas-shortcut__cta">See ideas</span>
+
+        <span className="ideas-shortcut__panel">
+          <span className="ideas-shortcut__shimmer" aria-hidden />
+          <span className="ideas-shortcut__content">
+            <span className="ideas-shortcut__eyebrow">Not sure where to start?</span>
+            <span className="ideas-shortcut__title">Don&apos;t know what to make?</span>
+            <span className="ideas-shortcut__link">See project ideas</span>
+          </span>
         </span>
       </button>
-    </div>
+    </aside>
   )
 }
